@@ -1,0 +1,249 @@
+:root {
+  --page-light: #f0f2f5;
+  --page-dark: #181d25;
+  --box-light: #ffffff;
+  --box-dark: #24292e;
+
+  --title-light: #000000;
+  --title-dark: #ffffff;
+
+  --sub-title-light: #000000a6;
+  --sub-title-dark: #cccccca6;
+
+  --text-light: #000000;
+  --text-dark: #ffffff;
+
+  --button-light: #304FFF;
+}
+
+@mixin page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+  overflow: hidden;
+}
+
+@mixin box {
+  display: flex;
+  border-radius: 12px;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+@mixin title {
+  line-height: 22px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@mixin sub-title {
+  line-height: 22px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+@mixin text {
+  line-height: 18px;
+  font-size: 15px;
+  margin-left: 5%;
+  align-self: center;
+}
+
+
+.page__light {
+  @include page;
+  background: #f0f2f5
+}
+
+.page-header__notch {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5%;
+  padding-top: 16px;
+  width: 90%;
+
+}
+
+.title__dark {
+  @include title;
+  color: var(--title-dark);
+}
+
+.title__light {
+  @include title;
+  color: var(--title-light);
+}
+
+.sub-title__dark {
+  @include sub-title;
+  color: var(--sub-title-dark);
+}
+
+.sub-title__light {
+  @include sub-title;
+  color: var(--sub-title-light);
+}
+
+.text__dark {
+  @include text;
+  color: var(--text-dark);
+}
+
+.text__light {
+  @include text;
+  color: var(--text-light);
+}
+
+.bold-text__light {
+  @include sub-title;
+  color: var(--title-light);
+  margin-left: 6%;
+}
+
+.logo {
+  width: 24px;
+  height: 24px;
+  display: flex;
+}
+
+
+.left-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 20px;
+}
+
+.right-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 20px;
+}
+
+.nav-bar {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.input-card__light {
+  @include box;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 150px;
+  height: 200px;
+
+  min-height: 200px;
+
+  max-height: 200px;
+  flex-shrink: 0;
+  flex-grow: 0;
+
+  margin-bottom: 32px;
+  margin-top: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background: var(--box-light);
+}
+
+.home-title__light {
+  @include title;
+  color: var(--title-light);
+}
+
+@mixin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 48px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 16px;
+}
+
+.button-app__light {
+  @include button;
+  background: linear-gradient(180deg, #667DFF, #304FFF);
+}
+
+.text-button-app__light {
+  line-height: 22px;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.input-box__light {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 16px;
+  margin-left: 6%;
+  margin-bottom: 16px;
+  border-width: 0px 0px 1px;
+  height: 58px;
+  width: 88%;
+  line-height: 22px;
+  font-size: 16px;
+  padding: 12px 8px;
+}
+
+.task-empty-item {
+  display: flex;
+  flex-direction: column;
+  margin: 8px 6%;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.task-list {
+  flex: 1;
+  padding: 10px;
+  flex-basis: 0;
+}
+
+/* 📋 TASK STYLES */
+.task-detail {
+  flex: 1;
+}
+
+.task-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px 16px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border: 2px solid var(--button-light);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-text__light {
+  @include text;
+  color: var(--text-light);
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  line-height: 20px;
+}
+
+.task-date__light {
+  @include text;
+  color: var(--sub-title-light);
+  font-size: 12px;
+  margin: 4px 0 0 0;
+  opacity: 0.8;
+}
