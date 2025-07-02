@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "@lynx-js/react";
 import "./App.scss";
-import forumLogo from "./assets/logo-forum.png";
+import forumLogo from "@assets/images/logo-forum.png?inline";
 
 export function App(props: { onMounted?: () => void }) {
   useEffect(() => {

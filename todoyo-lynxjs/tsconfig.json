@@ -3,8 +3,8 @@
     "jsx": "react-jsx",
     "jsxImportSource": "@lynx-js/react",
 
-    "module": "node18",
-    "moduleResolution": "node16",
+    "module": "esnext",
+    "moduleResolution": "bundler",
 
     "strict": true,
     "isolatedModules": true,
@@ -12,6 +12,12 @@
 
     "esModuleInterop": true,
     "skipLibCheck": true,
+
+    "paths": {
+      "@components/*": ["components/*"],
+      "@assets/*": ["assets/*"]
+    },
+    "baseUrl": "."
   },
-  "exclude": ["dist/"],
+  "exclude": ["dist/"]
 }
