@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.lynx.tasm.LynxView
 import com.lynx.tasm.LynxViewBuilder
+import com.lynx.xelement.XElementBehaviors  //new import
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun buildLynxView(): LynxView {
         val viewBuilder = LynxViewBuilder()
+        viewBuilder.addBehaviors(XElementBehaviors().create()) // add this line to enable xelement behaviors
         viewBuilder.setTemplateProvider(ProviderLynx(this))
         return viewBuilder.build(this)
     }

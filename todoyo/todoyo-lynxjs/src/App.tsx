@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from "@lynx-js/react";
 import "./App.scss";
 import forumLogo from "@assets/images/logo-forum.png?inline";
+import "@lynx-js/preact-devtools";
+import "@lynx-js/react/debug";
 
 export function App(props: { onMounted?: () => void }) {
   useEffect(() => {
@@ -40,6 +42,7 @@ export function App(props: { onMounted?: () => void }) {
 
         <view className="input-card__light">
           <text className="bold-text__light">Aggiungi Attività</text>
+
           <input
             className="input-box__light"
             placeholder="Inserisci nuova attività..."
